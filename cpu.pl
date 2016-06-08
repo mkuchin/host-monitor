@@ -56,7 +56,7 @@ sub updatecpugraph {
 
 sub updatecpudata {
         if ( ! -e "$rrdlog/cpu.rrd") {
-                print "Creating cpu.rrd"
+                print "Creating cpu.rrd";
                 RRDs::create ("$rrdlog/cpu.rrd", "--step=60",
                         "DS:user:COUNTER:600:0:U",
                         "DS:system:COUNTER:600:0:U",
